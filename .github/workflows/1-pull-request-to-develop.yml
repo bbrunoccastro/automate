@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      - 'feature**'
+name: ⛵ 1-pull-request-to-develop
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
